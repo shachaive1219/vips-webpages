@@ -1,0 +1,252 @@
+/* 기본 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nanum Gothic', '맑은 고딕', sans-serif;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Header */
+#header {
+    width: 100%;
+    height: 100px;
+    background: #8b0000; /* VIPS 시그니처 딥레드 컬러 */
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+#header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logo img {
+    height: 45px;
+    vertical-align: middle;
+}
+
+.gnb ul {
+    display: flex;
+    gap: 40px;
+}
+
+.gnb ul li a {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.gnb ul li a:hover {
+    color: #f3a847;
+}
+
+.util {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+}
+
+/* Main Visual */
+#main_visual {
+    width: 100%;
+    height: 650px;
+    margin-top: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.visual_slider .slide {
+    width: 100%;
+    height: 650px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.visual_slider .slide::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.txt_box {
+    position: relative;
+    z-index: 10;
+}
+
+.txt_box h2 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.txt_box p {
+    font-size: 20px;
+}
+
+/* Section: Menu */
+.sec_menu {
+    padding: 80px 0;
+}
+
+.sec_title {
+    text-align: center;
+    font-size: 32px;
+    color: #8b0000;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.sec_title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #8b0000;
+    margin: 15px auto 0;
+}
+
+.menu_list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.menu_list li {
+    width: 32%;
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.menu_list li:hover {
+    transform: translateY(-8px);
+}
+
+.menu_list .img_box img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.menu_list h4 {
+    font-size: 20px;
+    padding: 20px 20px 10px;
+    color: #222;
+}
+
+.menu_list p {
+    font-size: 14px;
+    color: #666;
+    padding: 0 20px 20px;
+}
+
+/* Section: Event */
+.sec_event {
+    background: #222;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.event_box h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #f3a847;
+}
+
+.event_box p {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.btn_more {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 2px solid #f3a847;
+    color: #f3a847;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn_more:hover {
+    background: #f3a847;
+    color: #222;
+}
+
+/* Footer */
+#footer {
+    background: #111;
+    color: #888;
+    padding: 40px 0;
+    font-size: 13px;
+}
+
+.footer_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.f_menu {
+    display: flex;
+    gap: 20px;
+}
+
+.f_menu li a:hover {
+    color: #fff;
+}
+
+.sns_list img {
+    width: 24px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.footer_bottom p {
+    margin-bottom: 5px;
+}
+
+.footer_bottom .copyright {
+    margin-top: 15px;
+    color: #555;
+}
