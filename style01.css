@@ -1,0 +1,157 @@
+/* 기본 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nanum Gothic', '맑은 고딕', sans-serif;
+    color: #333;
+    background-color: #111;
+    line-height: 1.6;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header (Left Sidebar) */
+header {
+    width: 200px;
+    height: 100vh;
+    background: #111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+header h1 img {
+    width: 140px;
+}
+
+#gnb {
+    margin-top: 40px;
+}
+
+#gnb li {
+    margin-bottom: 20px;
+}
+
+#gnb li a {
+    color: #bbb;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s;
+}
+
+#gnb li a:hover {
+    color: #c41230;
+}
+
+#sns {
+    display: flex;
+    gap: 10px;
+}
+
+#sns li a {
+    color: #777;
+    font-size: 14px;
+}
+
+#sns li a:hover {
+    color: #fff;
+}
+
+.snsSet img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+/* Nav (Top Bar) */
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 200px;
+    height: 40px;
+    background: #1b1b1b;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;
+    gap: 15px;
+    z-index: 90;
+}
+
+nav a img {
+    height: 14px;
+}
+
+/* Section Grid Layout */
+section {
+    margin-left: 20px;
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 240px;
+    gap: 10px;
+    background: #111;
+}
+
+article {
+    position: relative;
+    overflow: hidden;
+    background: #222;
+}
+
+article:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+article .bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+article .bg span {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+article .txt {
+    padding: 30px;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+article:nth-child(2) { background: #8b0000; }
+article:nth-child(3) { background: #d4a359; }
+article:nth-child(6) { background: #8b0000; }
+article:nth-child(8) { background: #8b0000; }
+article:nth-child(11) { background: #d4a359; }
